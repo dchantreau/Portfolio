@@ -1,11 +1,10 @@
-{% extends 'admin/base.html.twig' %}
+<!DOCTYPE html>
 
-{% block title %}Modifier son profil{% endblock %}
+<title>Modifier le Profil</title>
 
 {% block body %}
-    <h1>Modifier son profil</h1>
+    <h1>Modifier le Profil</h1>
 
-    {{ include('admin/user/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+    {{ include('user/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
-    <a href="{{ path('user_index') }}">Retour sur votre Profil</a>
 {% endblock %}

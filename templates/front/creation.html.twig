@@ -1,7 +1,33 @@
-<!DOCTYPE html>
+{% extends 'front/base.html.twig' %}
 
-<title>Hello CreationController!</title>
+{% block title %}Créations{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="/assets/css/front/base.css">
+<link rel="stylesheet" href="/assets/css/front/accueil.css">
+{% endblock %}
 
 {% block body %}
-Creation
+<div class= "blockaccueil">
+        <div class="gaucheaccueil">
+            <div class="blocLien" id="blocportrait" url="google.fr">
+            <div class="photo"><img src="photo.jpeg"></div>
+                <p>Truckmuche</p>
+            </div>
+            <div class="blocLien" id="blocexperience" url="google.fr">
+            <div class="photo"><img src="photo.jpeg"></div>
+                <p>AdopteUnChat.com</p>
+            </div>
+        </div>
+        <div class="droiteaccueil">
+            <div class="blocLien" id="bloccreation" url="google.fr">
+            <div class="photo"><img src="photo.jpeg"></div>
+                <p>Ressource Handicap Conseils</p>
+            </div>
+            <div class="blocLien" id="bloccontact" url="google.fr">
+            <div class="photo"><img src="photo.jpeg"></div>
+                <p>HACKATHON</p>
+            </div>
+        </div>
+    <div>
 {% endblock %}

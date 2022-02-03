@@ -2,9 +2,10 @@
 
 namespace App\Controller\Front;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class PortraitController extends AbstractController
 {
@@ -13,6 +14,7 @@ class PortraitController extends AbstractController
     {
         return $this->render('front/portrait.html.twig', [
             'controller_name' => 'PortraitController',
+            'user' => $userRepository->findOneBy([]),
         ]);
     }
 }

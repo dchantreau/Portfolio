@@ -1,7 +1,33 @@
 {% extends 'front/base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}Accueil{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="/assets/css/front/base.css">
+<link rel="stylesheet" href="/assets/css/front/accueil.css">
+{% endblock %}
 
 {% block body %}
-ACCUEIL
+    <div class= "blockaccueil">
+        <div class="gaucheaccueil">
+            <div class="blocLien" id="blocportrait" href="{{ path('portrait') }}">
+            <div class="photo"><img src="photo.jpeg"></div>
+                <p>Mon portrait</p>
+            </div>
+            <div class="blocLien" id="blocexperience" href="{{ path('experience') }}">
+            <div class="photo"><img src="photo.jpeg"></div>
+                <p>Mon expérience</p>
+            </div>
+        </div>
+        <div class="droiteaccueil">
+            <div class="blocLien" id="bloccreation" href="{{ path('creation') }}">
+            <div class="photo"><img src="photo.jpeg"></div>
+                <p>Mes créations</p>
+            </div>
+            <div class="blocLien" id="bloccontact" href="{{ path('contact') }}">
+            <div class="photo"><img src="photo.jpeg"></div>
+                <p> Me contacter</p>
+            </div>
+        </div>
+    <div>
 {% endblock %}

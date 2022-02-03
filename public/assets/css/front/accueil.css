@@ -1,0 +1,38 @@
+.blockaccueil{
+    display:flex;
+    justify-content: center;
+}
+
+.blocLien{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    height:600%;
+    width: 100%;
+}
+
+#blocportrait{
+    border:0.5px solid black;
+}
+
+#blocexperience{
+    border:0.5px solid black;
+}
+
+#bloccreation{
+    border:0.5px solid black;
+}
+
+#bloccontact{
+    border:0.5px solid black;
+}
+
+.gaucheaccueil{
+    display:flex;
+    flex-direction: column;
+}
+
+.droiteaccueil{
+    display:flex;
+    flex-direction: column;
+}

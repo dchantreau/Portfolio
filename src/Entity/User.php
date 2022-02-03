@@ -3,8 +3,6 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
@@ -33,13 +31,11 @@ class User
     #[ORM\Column(type: 'string', length: 255)]
     private $github;
 
-    #[ORM\OneToMany(mappedBy: 'user', targetEntity: Experience::class)]
-    private $experience;
+    #[ORM\Column(type: 'json')]
+    private $roles = [];
 
-    public function __construct()
-    {
-        $this->experience = new ArrayCollection();
-    }
+    #[ORM\Column(type: 'string', length: 255)]
+    private $password;
 
     public function getId(): ?int
     {
@@ -118,32 +114,26 @@ class User
         return $this;
     }
 
-    /**
-     * @return Collection|Experience[]
-     */
-    public function getExperience(): Collection
+    public function getRoles(): ?array
     {
-        return $this->experience;
+        return $this->roles;
     }
 
-    public function addExperience(Experience $experience): self
+    public function setRoles(array $roles): self
     {
-        if (!$this->experience->contains($experience)) {
-            $this->experience[] = $experience;
-            $experience->setUser($this);
-        }
+        $this->roles = $roles;
 
         return $this;
     }
 
-    public function removeExperience(Experience $experience): self
+    public function getPassword(): ?string
     {
-        if ($this->experience->removeElement($experience)) {
-            // set the owning side to null (unless already changed)
-            if ($experience->getUser() === $this) {
-                $experience->setUser(null);
-            }
-        }
+        return $this->password;
+    }
+
+    public function setPassword(string $password): self
+    {
+        $this->password = $password;
 
         return $this;
     }

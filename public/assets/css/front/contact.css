@@ -1,0 +1,36 @@
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input {
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    padding:1%;
+}
+
+label {
+    display:flex;
+    justify-content: center;
+}
+
+.boutoncontact{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+.blockFormulaire{
+    margin-right: 15%;
+}
+
+.contact h1{
+    display:flex;
+    justify-content: center;
+    font-size: 18px;
+}

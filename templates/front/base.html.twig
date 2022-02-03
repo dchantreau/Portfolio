@@ -1,19 +1,58 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/687ed3dc70.js" crossorigin="anonymous"></script>
+		<title>
+			{% block title %}Portfolio{% endblock %}
+		</title>
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+		{% block stylesheets %}
+		<link rel="stylesheet" href="/assets/css/front/base.css">
+		{% endblock %}
+
+		{% block javascripts %}
+		{% endblock %}
+	</head>
+	<body>
+	{% block header %}
+	<div  class ="base">
+		<div class="left">
+				<div class="name"><h1>Chantreau Damien</h1></div>
+				<div class="photo"><img src="photo.jpeg"></div>
+				<div class = "infos">
+				<h2>27 ans</h2>
+				<h2>Chantreaudamien@gmail</h2>
+				<h2>blablalinkedin</h2>
+				<h2>blablagithub</h2>
+		</div>
+	</div>
+	<div class="contenant">
+		<div class="navbar">
+			<div class="liens">
+				<li><a class="lien" href="{{ path('accueil') }}">Accueil</a></li>
+				<li><a class="lien" href="{{ path('portrait') }}">Mon portrait</a></li>
+				<li><a class="lien" href="{{ path('experience') }}">Mon expérience</a></li>
+				<li><a class="lien" href="{{ path('creation') }}">Mes créations</a></li>
+				<li><a class="lien" href="{{ path('contact') }}">Me contacter</a></li>
+			</div>
+		</div>
+		<div class = "right">
+			{% block body %}
+			{% endblock %}
+		</div>
+	</div>
+	{# {% if app.user %}
+	{{ app.user.email }}
+		<a href="{{ path('app_logout') }}"> Se déconnecter</a>
+	{% else %}
+		<a href="{{ path('login') }}"> Se connecter</a>
+	{% endif %} #}
+	</div>
+	{% endblock %}
+	</body>
 </html>
