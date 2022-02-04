@@ -4,6 +4,7 @@ namespace App\Controller\Front;
 
 use App\Entity\Visiteur;
 use App\Form\VisiteurType;
+use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Mailer\MailerInterface;
@@ -15,7 +16,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class VisiteurController extends AbstractController
 {
     #[Route('/contact', name: 'contact')]
-    public function index( Request $request, EntityManagerInterface $entityManager, MailerInterface $mailer): Response
+    public function index(UserRepository $userRepository, Request $request, EntityManagerInterface $entityManager, MailerInterface $mailer): Response
     {
         $contact = new Visiteur();
         $form = $this->createForm(VisiteurType::class, $contact);

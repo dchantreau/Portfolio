@@ -10,24 +10,32 @@
 {% block body %}
     <div class= "blockaccueil">
         <div class="gaucheaccueil">
-            <div class="blocLien" id="blocportrait" href="{{ path('portrait') }}">
-            <div class="photo"><img src="photo.jpeg"></div>
-                <p>Mon portrait</p>
-            </div>
-            <div class="blocLien" id="blocexperience" href="{{ path('experience') }}">
-            <div class="photo"><img src="photo.jpeg"></div>
+            <a href="{{ path('portrait') }}">
+                <div class="blocLien" id="blocportrait">
+                    <img src="/assets/images/codeur.gif">
+                    <p>Mon portrait</p>
+                </div>
+            </a>
+            <a href="{{ path('experience') }}">
+            <div class="blocLien" id="blocexperience">
+                <img src="/assets/images/codeur.gif">
                 <p>Mon expérience</p>
             </div>
+            </a>
         </div>
         <div class="droiteaccueil">
-            <div class="blocLien" id="bloccreation" href="{{ path('creation') }}">
-            <div class="photo"><img src="photo.jpeg"></div>
-                <p>Mes créations</p>
-            </div>
-            <div class="blocLien" id="bloccontact" href="{{ path('contact') }}">
-            <div class="photo"><img src="photo.jpeg"></div>
+            <a href="{{ path('creation') }}">
+                <div class="blocLien" id="bloccreation">
+                    <img src="/assets/images/codeur.gif">
+                    <p>Mes créations</p>
+                </div>
+            </a>
+            <a href="{{ path('contact') }}">
+                <div class="blocLien" id="bloccontact">
+                    <img src="/assets/images/codeur.gif">
                 <p> Me contacter</p>
-            </div>
+                </div>
+            </a>
         </div>
     <div>
 {% endblock %}

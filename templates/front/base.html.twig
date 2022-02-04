@@ -22,13 +22,14 @@
 	{% block header %}
 	<div  class ="base">
 		<div class="left">
-				<div class="name"><h1>Chantreau Damien</h1></div>
-				<div class="photo"><img src="photo.jpeg"></div>
+				<div class="name"><h1>{{ user.username }}</h1></div>
+				{# <div class="photo"><img src={{ user.photo }}></div> #}
+				<img src="/assets/images/codeur.gif">
 				<div class = "infos">
-				<h2>27 ans</h2>
-				<h2>Chantreaudamien@gmail</h2>
-				<h2>blablalinkedin</h2>
-				<h2>blablagithub</h2>
+				<h2>{{ user.age }} ans</h2>
+				<h2>{{ user.mail }}</h2>
+				<h2>{{ user.linkedin }}</h2>
+				<h2>{{ user.github }}</h2>
 		</div>
 	</div>
 	<div class="contenant">
@@ -41,11 +42,11 @@
 				<li><a class="lien" href="{{ path('contact') }}">Me contacter</a></li>
 			</div>
 		</div>
-		<div class = "right">
+	</div>
+		<div class = "page">
 			{% block body %}
 			{% endblock %}
 		</div>
-	</div>
 	{# {% if app.user %}
 	{{ app.user.email }}
 		<a href="{{ path('app_logout') }}"> Se déconnecter</a>

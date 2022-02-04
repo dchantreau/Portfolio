@@ -1,8 +1,8 @@
-.blockaccueil{
+.blockcreation{
     display:flex;
     justify-content: center;
     margin-top:2%;
-    margin-left: 30%;
+    margin-left: 22%;
     gap:100px;
 }
 
@@ -18,7 +18,7 @@
 .blocLien img{
     margin-top:5%;
     height:100px;
-    width:100px;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -38,19 +38,19 @@
     border:0.5px solid black;
 }
 
-.gaucheaccueil{
+.gauchecreation{
     display:flex;
     flex-direction: column;
     gap:50px;
 }
 
-.droiteaccueil{
+.droitecreation{
     display:flex;
     flex-direction: column;
     gap:50px;
 }
 
-.blockaccueil p{
+.blockcreation p{
     text-align: center;
     text-decoration: none;
     color: black;
