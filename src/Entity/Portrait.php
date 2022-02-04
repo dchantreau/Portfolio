@@ -14,67 +14,38 @@ class Portrait
     private $id;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $photo1;
+    private $photo;
 
     #[ORM\Column(type: 'string', length: 255)]
-    private $photo2;
-
-    #[ORM\Column(type: 'string', length: 255)]
-    private $texte1;
-
-    #[ORM\Column(type: 'string', length: 255)]
-    private $texte2;
+    private $texte;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getPhoto1(): ?string
+    public function getPhoto(): ?string
     {
-        return $this->photo1;
+        return $this->photo;
     }
 
-    public function setPhoto1(string $photo1): self
+    public function setPhoto(string $photo): self
     {
-        $this->photo1 = $photo1;
+        $this->photo = $photo;
 
         return $this;
     }
 
-    public function getPhoto2(): ?string
+    public function getTexte(): ?string
     {
-        return $this->photo2;
+        return $this->texte;
     }
 
-    public function setPhoto2(string $photo2): self
+    public function setTexte(string $texte): self
     {
-        $this->photo2 = $photo2;
+        $this->texte = $texte;
 
         return $this;
     }
 
-    public function getTexte1(): ?string
-    {
-        return $this->texte1;
-    }
-
-    public function setTexte1(string $texte1): self
-    {
-        $this->texte1 = $texte1;
-
-        return $this;
-    }
-
-    public function getTexte2(): ?string
-    {
-        return $this->texte2;
-    }
-
-    public function setTexte2(string $texte2): self
-    {
-        $this->texte2 = $texte2;
-
-        return $this;
-    }
 }

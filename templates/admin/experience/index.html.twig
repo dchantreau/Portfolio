@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<title>Experience index</title>
+
+{% block body %}
+    <h1>Toutes les experiences</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Texte</th>
+                <th>Photo</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for experience in experiences %}
+            <tr>
+                <td>{{ experience.texte }}</td>
+                <td>{{ experience.photo }}</td>
+                <td>
+                    <a href="{{ path('experience_show', {'id': experience.id}) }}">Voir</a>
+                    <a href="{{ path('experience_edit', {'id': experience.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                Pas d'expérience à afficher.
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('experience_new') }}">Ajouter une nouvelle expérience</a>
+{% endblock %}

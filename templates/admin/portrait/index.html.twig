@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<title>Le Portrait</title>
+
+{% block body %}
+    <h1>Le Portrait</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Photo</th>
+                <th>Texte</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ portrait.photo }}</td>
+                <td>{{ portrait.texte }}</td>
+                <td>
+                    <a href="{{ path('portrait_edit', {'id': portrait.id}) }}">Modifier le Portrait</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

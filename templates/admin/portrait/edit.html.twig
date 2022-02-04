@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+
+<title>Modifier le Portrait</title>
+
+{% block body %}
+    <h1>Modifier le Portrait</h1>
+
+    {{ include('admin/portrait/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+
+    <a href="{{ path('portrait_index') }}">Retour à Mon Portrait</a>
+
+{% endblock %}

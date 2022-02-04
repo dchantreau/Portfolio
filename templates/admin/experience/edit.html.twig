@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<title>Modifier l'experience</title>
+
+{% block body %}
+    <h1>Modifier l'experience</h1>
+
+    {{ include('admin/experience/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+
+    <a href="{{ path('experience_index') }}">Retour à la liste des expériences</a>
+
+    {{ include('admin/experience/_delete_form.html.twig') }}
+{% endblock %}

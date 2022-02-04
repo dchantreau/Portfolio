@@ -10,13 +10,11 @@ class PortraitFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
-         $portrait = new Portrait();
-         $portrait->setPhoto1("codeur.gif");
-         $portrait->setPhoto2("codeur.gif");
-         $portrait->setTexte1("Lorem ipsum dolor sit amet, consectetur adipiscing elit. ");
-         $portrait->setTexte2("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+        $portrait = new Portrait();
+        $portrait->setPhoto("codeur.gif");
+        $portrait->setTexte("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
 
-         $manager->persist($portrait);
+        $manager->persist($portrait);
 
         $manager->flush();
     }

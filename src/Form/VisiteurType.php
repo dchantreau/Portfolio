@@ -8,6 +8,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class VisiteurType extends AbstractType
 {
@@ -17,7 +18,7 @@ class VisiteurType extends AbstractType
             ->add('nom',TextType::class)
             ->add('prenom',TextType::class)
             ->add('mail',EmailType::class)
-            ->add('message',TextType::class)
+            ->add('message',TextareaType::class)
         ;
     }
 
