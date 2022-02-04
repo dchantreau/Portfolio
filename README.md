@@ -28,9 +28,8 @@ Réalisation d'un portfolio
 
 
 ## Partie Admin
-- Fixtures ok.
-- En chantier/cassée/perdue pour l'instant
- -> Partie faite pour user puis effacer à cause d'un make:entity au lieu d'un make:user, pas de commit et je regrette.
+- Les fixtures sont fonctionnels.
+- Make CRUD sur toutes mes entités, pas de css, login ne fonctionne pas encore.
 
 
 
