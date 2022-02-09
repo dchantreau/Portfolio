@@ -41,4 +41,3 @@ Réalisation d'un portfolio
 
 ## Fait par:
 * [Damien](https://github.com/dchantreau)
-
