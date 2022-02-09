@@ -1,0 +1,41 @@
+{% extends 'front/base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="/assets/css/front/base.css">
+<link rel="stylesheet" href="/assets/css/front/accueil.css">
+{% endblock %}
+
+{% block body %}
+    <div class= "blockaccueil">
+        <div class="gaucheaccueil">
+            <a href="{{ path('portrait') }}">
+                <div class="blocLien" id="blocportrait">
+                    <img src="/assets/images/codeur.gif">
+                    <p>Mon portrait</p>
+                </div>
+            </a>
+            <a href="{{ path('experience') }}">
+            <div class="blocLien" id="blocexperience">
+                <img src="/assets/images/codeur.gif">
+                <p>Mon expérience</p>
+            </div>
+            </a>
+        </div>
+        <div class="droiteaccueil">
+            <a href="{{ path('creation') }}">
+                <div class="blocLien" id="bloccreation">
+                    <img src="/assets/images/codeur.gif">
+                    <p>Mes créations</p>
+                </div>
+            </a>
+            <a href="{{ path('contact') }}">
+                <div class="blocLien" id="bloccontact">
+                    <img src="/assets/images/codeur.gif">
+                <p> Me contacter</p>
+                </div>
+            </a>
+        </div>
+    <div>
+{% endblock %}

@@ -1,0 +1,41 @@
+.bodyexp{
+    margin-left: 25%;
+    padding:5%;
+    font-size: 18px;
+}
+
+.blockexperience1{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap:10px;
+}
+
+.blockexperience1 p{
+    text-align: justify;
+}
+
+.photo img{
+    margin-top:5%;
+    height:100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.blockexperience2{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap:10px;
+}
+
+.blockexperience2 p{
+    text-align: justify;
+}
+
+.photoexp{
+    height:10px;
+    width: 10px;
+}

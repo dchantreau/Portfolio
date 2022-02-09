@@ -1,0 +1,49 @@
+{% extends 'front/base.html.twig' %}
+
+{% block title %}Créations{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="/assets/css/front/base.css">
+<link rel="stylesheet" href="/assets/css/front/creation.css">
+{% endblock %}
+
+{% block body %}
+    <div class= "blockcreation">
+        <div class="gauchecreation">
+            <a href="https://sankatouille.github.io/Projet1/" target="blank">
+                <div class="blocLien" id="blocportrait">
+                    <div class="photo">
+                        <img src="/assets/images/codeur.gif">
+                    </div>
+                    <p>Truckmuche</p>
+                </div>
+            </a>
+            <a href="https://nantes-projet2-adopte.phprover.wilders.dev/" target="blank">
+                <div class="blocLien" id="blocexperience">
+                    <div class="photo">
+                        <img src="/assets/images/codeur.gif">
+                    </div>
+                    <p>AdopteUnChat.com</p>
+                </div>
+            </a>
+        </div>
+        <div class="droitecreation">
+            <a href="https://www.google.fr/" target="blank">
+                <div class="blocLien" id="bloccreation">
+                    <div class="photo">
+                        <img src="/assets/images/codeur.gif">
+                    </div>
+                    <p>Ressource Handicap Conseils</p>
+                </div>
+            </a>
+            <a href="https://www.google.fr/" target="blank">
+                <div class="blocLien" id="bloccontact">
+                    <div class="photo">
+                        <img src="/assets/images/codeur.gif">
+                    </div>
+                    <p>HACKATHON</p>
+                </div>
+            </a>
+        </div>
+    </div>
+{% endblock %}

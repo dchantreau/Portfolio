@@ -1,0 +1,57 @@
+.blockaccueil{
+    display:flex;
+    justify-content: center;
+    margin-top:2%;
+    margin-left: 30%;
+    gap:100px;
+}
+
+.blocLien{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height:200px;
+    width: 180px;
+}
+
+.blocLien img{
+    margin-top:5%;
+    height:100px;
+    width:100px;
+    object-fit: cover;
+}
+
+#blocportrait{
+    border:0.5px solid black;
+}
+
+#blocexperience{
+    border:0.5px solid black;
+}
+
+#bloccreation{
+    border:0.5px solid black;
+}
+
+#bloccontact{
+    border:0.5px solid black;
+}
+
+.gaucheaccueil{
+    display:flex;
+    flex-direction: column;
+    gap:50px;
+}
+
+.droiteaccueil{
+    display:flex;
+    flex-direction: column;
+    gap:50px;
+}
+
+.blockaccueil p{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}

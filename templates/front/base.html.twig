@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/687ed3dc70.js" crossorigin="anonymous"></script>
+		<title>
+			{% block title %}Portfolio{% endblock %}
+		</title>
+
+		{% block stylesheets %}
+		<link rel="stylesheet" href="/assets/css/front/base.css">
+		{% endblock %}
+
+		{% block javascripts %}
+		{% endblock %}
+	</head>
+	<body>
+	{% block header %}
+	<div  class ="base">
+		<div class="left">
+				<div class="name"><h1>{{ user.username }}</h1></div>
+				{# <div class="photo"><img src={{ user.photo }}></div> #}
+				<img src="/assets/images/codeur.gif">
+				<div class = "infos">
+				<h2>{{ user.age }} ans</h2>
+				<h2>{{ user.mail }}</h2>
+				<h2>{{ user.linkedin }}</h2>
+				<h2>{{ user.github }}</h2>
+		</div>
+	</div>
+	<div class="contenant">
+		<div class="navbar">
+			<div class="liens">
+				<li><a class="lien" href="{{ path('accueil') }}">Accueil</a></li>
+				<li><a class="lien" href="{{ path('portrait') }}">Mon portrait</a></li>
+				<li><a class="lien" href="{{ path('experience') }}">Mon expérience</a></li>
+				<li><a class="lien" href="{{ path('creation') }}">Mes créations</a></li>
+				<li><a class="lien" href="{{ path('contact') }}">Me contacter</a></li>
+			</div>
+		</div>
+	</div>
+		<div class = "page">
+			{% block body %}
+			{% endblock %}
+		</div>
+	{# {% if app.user %}
+	{{ app.user.email }}
+		<a href="{{ path('app_logout') }}"> Se déconnecter</a>
+	{% else %}
+		<a href="{{ path('login') }}"> Se connecter</a>
+	{% endif %} #}
+	</div>
+	{% endblock %}
+	</body>
+</html>

@@ -1,0 +1,46 @@
+{% extends 'front/base.html.twig' %}
+
+{% block title %}Me contacter{% endblock %}
+
+{% block stylesheets %}
+  <link rel="stylesheet" href="/assets/css/front/contact.css">
+  <link rel="stylesheet" href="/assets/css/front/base.css">
+{% endblock %}
+
+{% block body %}
+
+<div class="blockFormulaire">
+    <h1 class="contact">Me contacter</h1>
+
+   {{ form_start(form) }}
+    <div class="form">
+        <div class="labelWidget">
+            {{ form_label(form.nom) }}
+                {{ form_widget(form.nom, {'attr': {'class': 'widget'}}) }}
+        </div>
+        <div class="labelWidget">
+            {{ form_label(form.prenom) }}
+                {{ form_widget(form.prenom, {'attr': {'class': 'widget'}}) }}
+        </div>
+        <div class="labelWidget">
+            {{ form_label(form.mail) }}
+                {{ form_widget(form.mail, {'attr': {'class': 'widget'}}) }}
+        </div>
+        <div class="labelWidget">
+            {{ form_label(form.message) }}
+                {{ form_widget(form.message, {'attr': {'class': 'widget'}}) }}
+        </div>
+    </div>
+    <div class="boutoncontact"><button class="btnForm btn">{{ button_label|default('Envoyer') }}</button></div>
+</div>
+<div class="form-error">
+  {{ form_errors(form.nom) }}
+  {{ form_errors(form.prenom) }}
+  {{ form_errors(form.mail) }}
+  {{ form_errors(form.message) }}
+</div>
+{{ form_end(form) }}
+
+{% endblock %}
+
+
